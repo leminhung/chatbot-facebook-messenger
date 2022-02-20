@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt bàn nhà hàng Eric</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Load custom Javascript and CSS-->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container fix-height">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-center mt-3">
+            <span class="title">Thông tin của bạn</span>
+          </div>
+          <input type="text" id="psid" hidden value="<%= sender_psid %>" />
+          <input type="text" id="username" hidden value="<%= username %>" />
+          <div class="form-group">
+            <label for="customerName">Họ và tên:</label>
+            <input
+              type="text"
+              id="customerName"
+              class="form-control"
+              placeholder="Họ và tên..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="email"
+              >Địa chỉ email (<span style="color: red">*</span>):</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-control email"
+              placeholder="Địa chỉ email..."
+            />
+            <div class="invalid-feedback">Địa chỉ email không hợp lệ.</div>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber"
+              >Số điện thoại (<span style="color: red">*</span>):</label
+            >
+            <input
+              type="text"
+              id="phoneNumber"
+              class="form-control phoneNumber"
+              placeholder="Số điện thoại..."
+            />
+            <div class="invalid-feedback">Số điện thoại không hợp lệ.</div>
+          </div>
+          <button class="btn btn-primary" type="submit" id="btnAddInfo">
+            GỬI ĐI
+          </button>
+        </div>
+      </div>
+      <span class="tt2 hidden"
+        >Thông tin của bạn đã được lưu, vui lòng đóng pop-up!</span
+      >
+    </div>
+    <script src="/js/add-info.js"></script>
+  </body>
+</html>
