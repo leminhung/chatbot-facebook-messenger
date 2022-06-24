@@ -8,15 +8,15 @@ https://m.me/tryyourbesttosuccess
 
 ## Chatbot Get Started
 
-![Screenshot (4)](https://bitly.com/chatbot-get-started)
+![Screenshot (4)](https://github.com/leminhung/chatbot-facebook-messenger/blob/master/public/image/get-started.png)
 
 ## Infor the world
 
-![Screenshot (4)](https://bitly.com/world-covid-info)
+![Screenshot (4)](https://github.com/leminhung/chatbot-facebook-messenger/blob/master/public/image/World.png)
 
 ## Infor in VietNam
 
-![Screenshot (4)](https://bitly.com/viet-nam-info-covid)
+![Screenshot (4)](https://github.com/leminhung/chatbot-facebook-messenger/blob/master/public/image/VietNam.jpg)
 
 ## Technologies & Libraries Used
 
