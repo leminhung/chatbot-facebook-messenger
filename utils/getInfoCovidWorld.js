@@ -5,6 +5,7 @@ let options = {
 };
 
 const getNewInforCountry = async (country) => {
+  console.log("country--", country);
   try {
     const data = await fetch(
       `${process.env.URL_COVID_INFOR_WORLD}${country}`,
