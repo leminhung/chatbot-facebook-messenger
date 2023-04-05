@@ -156,7 +156,7 @@ const setUpProfile = async (req, res) => {
   // Construct the message body
   let request_body = {
     get_started: { payload: "GET_STARTED" },
-    whitelisted_domains: ["https://friendlyy-chatbot.onrender.com//"],
+    whitelisted_domains: ["https://friendlyy-chatbot.onrender.com/"],
   };
   let infoRes = {
     uri: `https://graph.facebook.com/v13.0/me/messenger_profile?access_token=${process.env.PAGE_ACCESS_TOKEN}`,
