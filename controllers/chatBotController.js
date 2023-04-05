@@ -176,6 +176,7 @@ const setUpProfile = async (req, res) => {
 };
 
 const setUpPersistentMenu = async (req, res, next) => {
+  console.log("RESPersistentMenu--", req);
   let request_body = {
     persistent_menu: [
       {
@@ -190,12 +191,19 @@ const setUpPersistentMenu = async (req, res, next) => {
           {
             type: "web_url",
             title: "Github Lê Minh Hưng",
-            url: "https://github.com/leminhhung2001",
+            url: "https://github.com/leminhung",
           },
           {
             type: "postback",
             title: "Reset conversation now",
             payload: "RESET_BOT",
+          },
+          {
+            type: "web_url",
+            title: "Leave infor so we can contact you",
+            url: "https://github.com/leminhung",
+            webview_height_ratio: "full",
+            messenger_extensions: true,
           },
         ],
       },
