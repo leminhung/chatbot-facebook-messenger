@@ -11,7 +11,7 @@ import connectDB from "./config/database.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 dotenv.config({
-  path: "./config/config.env",
+  path: "./config/.env",
 });
 let app = express();
 connectDB();

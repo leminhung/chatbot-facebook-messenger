@@ -6,15 +6,15 @@ const societySchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
     },
     imageUrl: {
       type: String,
-      required: true,
+      // required: true,
     },
     link: {
       type: String,
-      required: true,
+      // required: true,
     },
   },
   { timestamps: true }
