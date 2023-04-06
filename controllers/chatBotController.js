@@ -4,6 +4,7 @@ import { getDetailsCovidInfoLocation } from "../utils/getInfoCovid.js";
 import { getNewInforCountry } from "../utils/getInfoCovidWorld.js";
 import { checkVietnameseString } from "../utils/checkVietNameseLanguage.js";
 import { templateInfoCovid } from "../utils/template.js";
+import { checkDirtyWord } from "../utils/checkDirtyWord.js";
 
 const COVID_ROUTE = process.env.COVID_ROUTE;
 const SOCIETY_ROUTE = process.env.SOCIETY_ROUTE;
@@ -66,10 +67,22 @@ const postWebhook = (req, res, next) => {
   }
 };
 
+// handle received message
 const handleMessage = async (sender_psid, received_message) => {
   let messageText = received_message.text?.toLowerCase().replace(/\s+/g, "");
   let response = { text: "" },
     text;
+
+  // check dirty word
+  const { inValid, dirtyWord } = checkDirtyWord(messageText);
+  if (inValid) {
+    response = {
+      text: `Your chat contains impolite words like "${dirtyWord}" 😒😒, please use the polite word possible 😘`,
+    };
+    callSendAPI(sender_psid, response);
+    return;
+  }
+
   let check = ["1", "2", "3", "getstarted"].includes(messageText);
   if (!check) {
     check = checkVietnameseString(messageText);
@@ -127,6 +140,7 @@ const handlePostback = async (sender_psid, received_postback) => {
   }
 };
 
+// send information back to user
 function callSendAPI(sender_psid, response) {
   // Construct the message body
   let request_body = {
