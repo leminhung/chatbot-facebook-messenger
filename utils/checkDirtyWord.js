@@ -1,4 +1,16 @@
-const listDirtyWords = ["địt", "đéo", "đụ", "fuck", "cút", "lồn", "cặc"];
+const listDirtyWords = [
+  "clusterfuck",
+  "fucking",
+  "fuckin",
+  "fuck",
+  "sex",
+  "shit",
+  "shitty",
+  "shitblimp",
+  "doggy",
+  "doggystyle",
+  "hentai",
+];
 
 const checkDirtyWord = (messageText) => {
   for (const dirtyWord of listDirtyWords) {
