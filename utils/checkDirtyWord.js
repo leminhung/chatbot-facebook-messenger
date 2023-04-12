@@ -13,7 +13,6 @@ const listDirtyWords = [
 ];
 
 const checkDirtyWord = (messageText = " ") => {
-  console.log("messageText--", messageText);
   for (const dirtyWord of listDirtyWords) {
     if (messageText.includes(dirtyWord)) return { inValid: true, dirtyWord };
   }

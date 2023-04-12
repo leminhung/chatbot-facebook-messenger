@@ -73,6 +73,14 @@ const handleMessage = async (sender_psid, received_message) => {
   let response = { text: "" },
     text;
 
+  console.log(
+    "------------------------------------------------------------------------------------------------------------------------------------------------------"
+  );
+  console.log("yourInput--", messageText);
+  console.log(
+    "------------------------------------------------------------------------------------------------------------------------------------------------------"
+  );
+
   // check dirty word
   const { inValid, dirtyWord } = checkDirtyWord(messageText);
   if (inValid) {
