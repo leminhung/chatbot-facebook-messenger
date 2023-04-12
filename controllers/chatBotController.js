@@ -69,8 +69,7 @@ const postWebhook = (req, res, next) => {
 
 // handle received message
 const handleMessage = async (sender_psid, received_message) => {
-  let messageText =
-    received_message.text?.toLowerCase().replace(/\s+/g, "") || " ";
+  let messageText = received_message.text?.toLowerCase().replace(/\s+/g, "");
   let response = { text: "" },
     text;
 
