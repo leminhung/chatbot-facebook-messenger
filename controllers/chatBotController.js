@@ -159,7 +159,7 @@ function callSendAPI(sender_psid, response) {
     message: response,
   };
 
-  console.log("RESPONSE--", request_body);
+  console.log("RESPONSE-", request_body);
   let infoRes = {
     uri: "https://graph.facebook.com/v2.6/me/messages",
     qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
