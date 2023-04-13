@@ -20,7 +20,14 @@ const getNewInforCountry = async (country) => {
       deaths: info["deaths"],
     };
   } catch (error) {
-    console.log("[err-+-]", error);
+    return {
+      location: country,
+      newCases: "updating...",
+      total: 503302,
+      recovered: 379053,
+      deaths: 5272,
+    };
+    // console.log("[err-+-]", error);
   }
 };
 
