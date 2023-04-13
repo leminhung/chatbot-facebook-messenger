@@ -17,12 +17,12 @@ const common = (model, link) => {
         for (let i = 0; i < 6; i++) {
           let imgUrl;
 
-          if (i >= 4) imgUrl = imgs[i].attribs["data-src"];
-          else imgUrl = imgs[i].attribs.src;
+          if (i >= 4) imgUrl = imgs[i]?.attribs["data-src"];
+          else imgUrl = imgs[i]?.attribs?.src;
 
           await model.create({
             title: $(titles[i]).text().trim(),
-            link: DAN_TRI_LINK + links[i].attribs.href,
+            link: DAN_TRI_LINK + links[i]?.attribs?.href,
             imageUrl: imgUrl,
           });
         }
