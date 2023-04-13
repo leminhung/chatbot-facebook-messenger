@@ -27,6 +27,7 @@ const getNewInforCountry = async (country) => {
       recovered: 379053,
       deaths: 5272,
     };
+
     // console.log("[err-+-]", error);
   }
 };
